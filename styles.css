@@ -39,6 +39,8 @@ body{
 
 .thick{
     font-weight: 800;
+    width: 90vw;
+    margin-bottom: 10px;
 }
 
 .centered {
@@ -48,8 +50,8 @@ body{
     transform: translate(-50%, -50%);
     padding: 0.5em;
     border-radius: 10px;
-    font-size: 2vw;
-    width: 80%;
+    font-size: 1.6vw;
+    width: 90vw;
     text-align: center;
 }
 
@@ -58,7 +60,7 @@ body{
     margin: 0.3em auto;
     padding-bottom: 5px;
     border-bottom: 4px solid #e14c4c;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 #tiles{
@@ -77,7 +79,7 @@ body{
 .tile:before {
     background-color: whitesmoke;
     content: "";
-    inset: 1px;
+    inset: 1.5px;
     position: absolute;
 }
 
@@ -109,7 +111,11 @@ body{
   text-decoration: none;
   transition: background-color 400ms, border-color 400ms;
   margin: 5px 0;
-  color: whitesmoke;
+}
+
+.meta-link>a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .amilogo{
@@ -170,7 +176,7 @@ body{
     }
 
     .centered{
-        font-size: 3vw;
+        font-size: 2.2vw;
     }
     .amilogo>img{
         width: 40px;
@@ -186,6 +192,124 @@ body{
     }
 
     .centered{
-        font-size: 4vw;
+        font-size: 2.7vw;
     }
+
+    .list{
+        grid-template-columns: 1fr;
+    }
+}
+
+.members{
+    padding: 1vh 0;
+    margin-bottom: 1em;
+}
+
+.meetHead{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.meeth1{
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+    border-bottom: 4px solid #e14c4c;
+    max-width: max-content;text-align:center;
+}
+
+.list{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    padding: 0 2vw;
+    gap: 1vw;
+}
+
+.item{
+    border: 2px solid #e14c4c;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid rgba(245, 245, 245, 0.6);
+    font-size: 1em;
+}
+
+.item>h1{
+    color: white;
+}
+
+.item>h2{
+    color: rgb(133, 140, 216);
+}
+
+@media only screen and (max-width: 650px) {
+    .list{
+        grid-template-columns: 1fr 1fr;
+    }
+    .item{
+        font-size: 0.8em;
+    }
+}
+
+.contact *{
+    color: whitesmoke !important;
+}
+
+.contact i{
+    color:#e14c4c !important;
+}
+
+.contact{
+    background-color: black;
+    padding: 1.5em 2vw;
+}
+
+.contact>h1 , .socials>h1{
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+    border-bottom: 4px solid #e14c4c;
+    max-width: max-content;
+    text-align: center;
+}
+
+.contact-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.contactItem{
+    display:flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+.contactItem>i{
+    margin-right: 5px;
+}
+
+.socials{
+    padding: 1.5em 2vw;
+}
+
+.socialList>i{
+    font-size: 2em;
+    margin: 0.2em 0.5em;
+    padding: 0.2em;
+    border-radius: 100%;
+    outline: 2px solid #e14c4c;
+}
+
+.socials>h2{
+    margin: 0 0.5em;
+}
+
+.socialList>i:hover{
+    background-color: rgb(15, 15, 15);
+    color: whitesmoke;
+    transition: 0.3s ease-in;
 }
