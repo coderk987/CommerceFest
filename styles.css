@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    
+    to {
+      background-position: -200% center;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    color:rgb(15, 15, 15);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --one:hsla(235, 60%, 29%);
+    --two: hsla(0, 74%, 36%);
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    overflow-x:hidden;
+}
+
+.tileBody{
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(to right, var(--one), var(--two),var(--one));
+    background-size: 200%;
+    color: rgb(15, 15, 15);
+    overflow:hidden;
+}
+
+.thick{
+    font-weight: 800;
+}
+
+.centered {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 2vw;
+    width: 80%;
+    text-align: center;
+}
+
+.special{
+    width: max-content;
+    margin: 0.3em auto;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #e14c4c;
+    transform: scale(1.3);
+}
+
+#tiles{
+    height: 100vh;
+    width: 100vw;
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows),1fr);
+}
+
+.tile{
+    position:relative;
+}
+
+.tile:before {
+    background-color: whitesmoke;
+    content: "";
+    inset: 1px;
+    position: absolute;
+}
+
+.heroImg{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.links{
+    position:absolute;
+    left: 15px;
+    bottom: 10px;
+    display:flex;
+    flex-direction: column;
+}
+
+.meta-link{
+  backdrop-filter: blur(3px);
+  background-color: rgba(15, 15, 15, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  margin: 5px 0;
+  color: whitesmoke;
+}
+
+.amilogo{
+    position:absolute;
+    left: 15px;
+    top: 10px;
+    background-color: rgb(133, 140, 216);
+    border-radius: 10%/50%;
+    display:flex;
+    align-items: center;
+    padding: 0.2em 0.5em;
+}
+
+.amilogo>img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.about{
+    width: 100vw;
+    background: whitesmoke;
+    display:flex;
+    padding: 0 3vw;
+    overflow-x:hidden;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://assets.reedpopcdn.com/-1617285526935.jpg/BROK/thumbnail/1600x900/format/jpg/quality/80/-1617285526935.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutContent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4vw;
+    font-size: 1.2em;
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 95vw;
+}
+
+.aboutContent>h1{
+    font-weight: 800;
+    margin-bottom: 0.5em;
+    translate: scale(1.3);
+    border-bottom: 4px solid #e14c4c;
+    max-width: max-content;
+}
+
+@media only screen and (max-width: 730px) {
+    .aboutContent{
+        font-size: 1em;
+    }
+
+    .centered{
+        font-size: 3vw;
+    }
+    .amilogo>img{
+        width: 40px;
+    }
+    .amilogo{
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .aboutContent{
+        font-size: 0.7em;
+    }
+
+    .centered{
+        font-size: 4vw;
+    }
+}
